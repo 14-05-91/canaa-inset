@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Canaã-Inset Dedetização - Líder em controle de pragas no Rio de Janeiro. Eliminamos baratas, cupins, ratos, formigas e escorpiões com segurança e garantia total. Orçamento grátis!">
+    <meta property="og:title" content="Canaã-Inset Dedetização | Controle de Pragas Profissional">
+    <meta property="og:description"
+        content="Eliminamos pragas com precisão e segurança total. Atendimento 24h, garantia de serviço e produtos sem cheiro.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="canaa_inset_logo.jpg">
+    <title>Canaã-Inset Dedetização | Controle de Pragas Profissional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #CC0000;
+            --primary-light: #A10000;
+            --secondary: #1a1a1a;
+            --accent: #FFD700;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Focus-visible for keyboard navigation */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--secondary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav ul {
+            display: none;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+            }
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-header {
+            display: none;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        @media (min-width: 768px) {
+            .btn-header {
+                display: block;
+            }
+        }
+
+        .btn-header:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(6, 78, 59, 0.2);
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+        }
+
+        .hero-content {
+            color: var(--white);
+            max-width: 700px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 550px;
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-btns {
+                flex-direction: row;
+            }
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 1.25rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 1.25rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Ticker */
+        .ticker {
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 0.75rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            border-bottom: 1px solid var(--gray-100);
+            z-index: 20;
+        }
+
+        .ticker-track {
+            display: inline-flex;
+            width: max-content;
+            animation: ticker-scroll 20s linear infinite;
+            will-change: transform;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .ticker-item::before {
+            content: '★';
+            margin-right: 0.75rem;
+            font-size: 0.6rem;
+            opacity: 0.5;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--primary);
+            padding: clamp(3rem, 6vw, 5rem) 0;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item h2 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Services */
+        .services {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: clamp(2.5rem, 5vw, 5rem);
+        }
+
+        .section-header span {
+            color: var(--secondary);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: clamp(1.5rem, 4vw, 3rem);
+            border-radius: 2.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--bg-light);
+            border-radius: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--secondary);
+        }
+
+        .service-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Pests */
+        .pests {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+            background: var(--white);
+        }
+
+        .pests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .pests-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .pests-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .pest-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: clamp(1rem, 3vw, 2rem);
+            background: var(--bg-light);
+            border-radius: 1.5rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .pest-item:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(6, 78, 59, 0.15);
+        }
+
+        .pest-item:hover img {
+            mix-blend-mode: screen;
+            filter: invert(1) brightness(1.5);
+        }
+
+        .pest-item img {
+            margin-bottom: 1rem;
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            filter: hue-rotate(240deg) saturate(2);
+            /* Turns green into red */
+        }
+
+        .pest-item span {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: clamp(0.6rem, 2vw, 0.75rem);
+        }
+
+        /* About */
+        .about {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+        }
+
+        .about-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2.5rem, 5vw, 5rem);
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .about-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 3rem;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: clamp(1.75rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .feature-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-item svg {
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 8rem 0;
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 2.5rem;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .phone-link {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 6rem 0 3rem;
+            background: var(--white);
+            border-top: 1px solid var(--bg-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            }
+        }
+
+        .footer-col h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-col a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: var(--white);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 14px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Mobile Menu */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--white);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .mobile-nav-overlay.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .mobile-nav-links a {
+            font-size: 2.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 8rem 0;
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 2.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .testimonial-card p {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-author .avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author .info strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author .info span {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            /* Stop decorative animations but keep ticker running */
+            *:not(.ticker-track),
+            *:not(.ticker-track)::before,
+            *:not(.ticker-track)::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* FAQ */
+        .faq {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+            background: var(--white);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-align: left;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--secondary);
+        }
+
+        .faq-question svg {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: var(--secondary);
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            padding: clamp(3rem, 5vw, 5rem) 0;
+            background: var(--bg-light);
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .badges-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+        }
+
+        .badge-item svg {
+            color: var(--secondary);
+        }
+
+        .badge-item span {
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+        }
+
+        /* Process Steps */
+        .process {
+            padding: clamp(4rem, 8vw, 8rem) 0;
+            background: var(--white);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            padding: 2rem 1rem;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.25rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* ═══════════════════════════════════════════
+           MICRO-ANIMATIONS — living icons system
+           Inspired by animated weather icons concept.
+           All CSS-only, zero JS, zero dependencies.
+        ═══════════════════════════════════════════ */
+
+        /* 1. PEST ICONS — continuous subtle wiggle (alive feeling) */
+        @keyframes pest-crawl {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            20% {
+                transform: translate(1px, -1px) rotate(2deg);
+            }
+
+            40% {
+                transform: translate(-1px, 0.5px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(0.5px, 1px) rotate(1deg);
+            }
+
+            80% {
+                transform: translate(-0.5px, -0.5px) rotate(-2deg);
+            }
+        }
+
+        /* Pest animation handled by JavaScript (immune to prefers-reduced-motion) */
+        .pest-item img {
+            transform-origin: center;
+        }
+
+        /* 2. TRUST BADGE ICONS — breathing pulse glow */
+        @keyframes badge-breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px transparent);
+            }
+
+            50% {
+                transform: scale(1.08);
+                filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.4));
+            }
+        }
+
+        .badge-item svg {
+            animation: badge-breathe 3s ease-in-out infinite;
+        }
+
+        .badge-item:nth-child(1) svg {
+            animation-delay: 0s;
+        }
+
+        .badge-item:nth-child(2) svg {
+            animation-delay: 0.75s;
+        }
+
+        .badge-item:nth-child(3) svg {
+            animation-delay: 1.5s;
+        }
+
+        .badge-item:nth-child(4) svg {
+            animation-delay: 2.25s;
+        }
+
+        /* 3. SERVICE CARD ICONS — gentle float */
+        @keyframes service-float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .service-icon svg {
+            animation: service-float 4s ease-in-out infinite;
+        }
+
+        .service-card:nth-child(1) .service-icon svg {
+            animation-delay: 0s;
+        }
+
+        .service-card:nth-child(2) .service-icon svg {
+            animation-delay: 1.3s;
+        }
+
+        .service-card:nth-child(3) .service-icon svg {
+            animation-delay: 2.6s;
+        }
+
+        /* 4. PROCESS STEP NUMBERS — pulse ring on scroll reveal */
+        @keyframes step-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(74, 222, 128, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+            }
+        }
+
+        .process.visible .step-number {
+            animation: step-pulse 2.5s ease-out infinite;
+        }
+
+        .process.visible .process-step:nth-child(1) .step-number {
+            animation-delay: 0s;
+        }
+
+        .process.visible .process-step:nth-child(2) .step-number {
+            animation-delay: 0.5s;
+        }
+
+        .process.visible .process-step:nth-child(3) .step-number {
+            animation-delay: 1s;
+        }
+
+        .process.visible .process-step:nth-child(4) .step-number {
+            animation-delay: 1.5s;
+        }
+
+        /* 5. HERO SHIELD LOGO — slow protective rotation */
+        @keyframes shield-guard {
+
+            0%,
+            100% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateY(15deg);
+            }
+        }
+
+        .logo svg {
+            animation: shield-guard 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        /* 6. CTA PHONE ICON — ring vibrate */
+        @keyframes phone-ring {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(10deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .phone-link svg {
+            animation: phone-ring 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        /* 7. HERO TAG — subtle glow pulse */
+        @keyframes tag-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+            }
+
+            50% {
+                box-shadow: 0 0 20px 2px rgba(74, 222, 128, 0.15);
+            }
+        }
+
+        .hero-tag {
+            animation: tag-glow 3s ease-in-out infinite;
+        }
+
+        /* 8. STAT NUMBERS — glow on reveal */
+        @keyframes stat-glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 0 transparent;
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+            }
+        }
+
+        .stats.visible .stat-item h2 {
+            animation: stat-glow 3s ease-in-out infinite;
+        }
+
+        /* 9. FAQ ICON — rotate on open */
+        .faq-item.active .faq-question svg {
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question svg {
+            transition: transform 0.3s ease;
+        }
+
+        /* 10. WHATSAPP CTA BUTTON — attention shimmer */
+        @keyframes btn-shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .contact-cta .btn-primary {
+            background-image: linear-gradient(110deg,
+                    var(--secondary) 0%,
+                    var(--secondary) 40%,
+                    #6ee7a0 50%,
+                    var(--secondary) 60%,
+                    var(--secondary) 100%);
+            background-size: 200% 100%;
+            animation: btn-shimmer 4s linear infinite;
+        }
+
+        /* Reduce non-essential animations for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+
+            .hero-tag,
+            .stats.visible .stat-item h2,
+            .logo svg {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    Canaã-Inset
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="btn-header">Orçamento Grátis</a>
+                <button class="menu-toggle" id="open-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="#" class="logo">Canaã-Inset</a>
+            <button class="menu-toggle" id="close-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-link">Início</a></li>
+            <li><a href="#services" class="mobile-link">Serviços</a></li>
+            <li><a href="#about" class="mobile-link">Sobre</a></li>
+            <li><a href="#faq" class="mobile-link">FAQ</a></li>
+            <li><a href="#contact" class="mobile-link">Contato</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <img src="hero_canaa.jpg"
+                    alt="Técnico da Canaã-Inset realizando dedetização profissional com foco em precisão">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <span
+                        style="font-size: 0.9rem; font-weight: 700; color: #FFD700; text-transform: uppercase; letter-spacing: 1px; background: rgba(0,0,0,0.4); padding: 4px 12px; border-radius: 4px; display: inline-block;">⭐
+                        5.0 · 898 AVALIAÇÕES NO GOOGLE</span>
+                    <h1 style="margin-top: 0.5rem;">Canaã-Inset: 40 Anos Combatendo Pragas com Precisão</h1>
+                    <p>Proteja sua família e seu patrimônio com a empresa mais experiente do Grajaú. Atendimento rápido
+                        em todo o Rio de Janeiro.</p>
+                    <div class="hero-btns">
+                        <a href="https://wa.me/5521976351589?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20dedetização%20visto%20no%20site"
+                            target="_blank" class="btn-primary" aria-label="Solicitar orçamento pelo WhatsApp">ORÇAMENTO
+                            GRÁTIS →</a>
+                        <a href="#services" class="btn-outline">CONHEÇA NOSSOS SERVIÇOS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ticker" role="marquee"
+            aria-label="Benefícios: Atendimento 24h, Garantia Total, Produtos Sem Cheiro">
+            <div class="ticker-track">
+                <div class="ticker-item">ATENDIMENTO 24H</div>
+                <div class="ticker-item">GARANTIA TOTAL</div>
+                <div class="ticker-item">PRODUTOS SEM CHEIRO</div>
+                <div class="ticker-item">EQUIPE CERTIFICADA</div>
+                <div class="ticker-item">ORÇAMENTO GRÁTIS</div>
+                <div class="ticker-item">SEGURO PARA PETS</div>
+                <div class="ticker-item">ATENDIMENTO 24H</div>
+                <div class="ticker-item">GARANTIA TOTAL</div>
+                <div class="ticker-item">PRODUTOS SEM CHEIRO</div>
+                <div class="ticker-item">EQUIPE CERTIFICADA</div>
+                <div class="ticker-item">ORÇAMENTO GRÁTIS</div>
+                <div class="ticker-item">SEGURO PARA PETS</div>
+            </div>
+        </div>
+
+        <section class="stats reveal">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h2 data-target="40" data-suffix="+">0</h2>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 data-target="5000" data-suffix="+" data-display="5.000+">0</h2>
+                        <p>Clientes Atendidos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 data-target="15" data-suffix="+">0</h2>
+                        <p>Técnicos Certificados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 data-target="100" data-suffix="%">0</h2>
+                        <p>Garantia de Serviço</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-badges reveal">
+            <div class="container">
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <span>Licença INEA</span>
+                    </div>
+                    <div class="badge-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                        <span>Laudo Técnico</span>
+                    </div>
+                    <div class="badge-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                            <line x1="4" y1="22" x2="4" y2="15" />
+                        </svg>
+                        <span>Vigilância Sanitária</span>
+                    </div>
+                    <div class="badge-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        <span>Resposta em até 24h</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process reveal">
+            <div class="container">
+                <div class="section-header"><span>Como Funciona</span>
+                    <h2>4 passos para acabar com as pragas</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Contato</h3>
+                        <p>Fale conosco pelo WhatsApp ou telefone e descreva o problema</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Inspeção</h3>
+                        <p>Nossa equipe faz uma vistoria gratuita no local</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Tratamento</h3>
+                        <p>Aplicação com produtos de última geração, sem cheiro</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Garantia</h3>
+                        <p>Monitoramento pós-serviço com garantia total de resultado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services reveal" id="services">
+            <div class="container">
+                <div class="section-header"><span>Nossas Especialidades</span>
+                    <h2>Soluções para cada necessidade</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg></div>
+                        <h3>Residencial</h3>
+                        <p>Ambientes livres de pragas com segurança para crianças e pets. Utilizamos produtos sem cheiro
+                            e de baixa toxicidade, ideais para casas e apartamentos.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg></div>
+                        <h3>Comercial</h3>
+                        <p>Mantenha seu negócio em conformidade com a Vigilância Sanitária. Emitimos laudo técnico e
+                            certificado para restaurantes, clínicas e escritórios.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                <path d="M7 10.5c0-2.485 2.239-4.5 5-4.5s5 2.015 5 4.5" />
+                                <path d="M12 22v-6" />
+                                <path d="m4.93 15.5 5.07-2.93" />
+                                <path d="m19.07 15.5-5.07-2.93" />
+                            </svg></div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Métodos sustentáveis e biodegradáveis que eliminam pragas sem prejudicar o meio ambiente nem
+                            a saúde da sua família.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pests reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pragas que Combatemos</h2>
+                </div>
+                <div class="pests-grid">
+                    <div class="pest-item">
+                        <img src="img/pest-barata.png" alt="Barata" width="64" height="64" loading="lazy">
+                        <span>Baratas</span>
+                    </div>
+                    <div class="pest-item">
+                        <img src="img/pest-formiga.png" alt="Formiga" width="64" height="64" loading="lazy">
+                        <span>Formigas</span>
+                    </div>
+                    <div class="pest-item">
+                        <img src="img/pest-cupim.png" alt="Cupim" width="64" height="64" loading="lazy">
+                        <span>Cupins</span>
+                    </div>
+                    <div class="pest-item">
+                        <img src="img/pest-rato.png" alt="Rato" width="64" height="64" loading="lazy">
+                        <span>Ratos</span>
+                    </div>
+                    <div class="pest-item">
+                        <img src="img/pest-aranha.png" alt="Aranha" width="64" height="64" loading="lazy">
+                        <span>Aranhas</span>
+                    </div>
+                    <div class="pest-item">
+                        <img src="img/pest-escorpiao.png" alt="Escorpião" width="64" height="64" loading="lazy">
+                        <span>Escorpiões</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about reveal" id="about">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-image"><img src="porque_canaa.jpg.png"
+                            alt="Equipe Canaã-Inset reunida na Associação Presbiteriana Cuidando do Amanhã"
+                            loading="lazy"></div>
+                    <div class="about-content">
+                        <span>Por que a Canaã-Inset?</span>
+                        <h2>Especialistas em Controle de Pragas há 4 Décadas</h2>
+                        <p>Com mais de 40 anos de história, a <strong>Canaã-Inset</strong> consolidou-se como referência
+                            no Rio de Janeiro pela eficiência e compromisso com a saúde ambiental. Nossa tradição no
+                            Grajaú é sinônimo de segurança para milhares de famílias.</p>
+                        <p>Utilizamos tecnologias de ponta e equipe altamente treinada para oferecer soluções
+                            definitivas contra baratas, cupins, formigas e roedores, além de limpeza especializada de
+                            reservatórios de água.</p>
+                        <ul class="feature-list">
+                            <li class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>Planos Personalizados</li>
+                            <li class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>Segurança para Pets</li>
+                            <li class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>Laudo Técnico</li>
+                            <li class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>Suporte Pós-Venda</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary" style="display: inline-flex; width: auto;"
+                            aria-label="Solicitar orçamento grátis">SOLICITAR ORÇAMENTO</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials reveal">
+            <div class="container">
+                <div class="section-header"><span>Depoimentos</span>
+                    <h2>O que dizem nossos clientes</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Serviço de limpeza de caixa d'água excelente. Profissionais muito educados e deixaram tudo
+                            limpo. Recomendo a Canaã-Inset."</p>
+                        <div class="testimonial-author">
+                            <strong>Ana Almeida</strong>
+                            <span>Grajaú, RJ</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Contratei para acabar com cupins e o resultado foi imediato. Dá pra ver que os 40 anos de
+                            experiência fazem a diferença."</p>
+                        <div class="testimonial-author">
+                            <strong>Ricardo Santos</strong>
+                            <span>Tijuca, RJ</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Atendimento nota 10 pelo WhatsApp. Resolveram o problema de baratas no condomínio com
+                            rapidez e preço justo."</p>
+                        <div class="testimonial-author">
+                            <strong>Maria Julia</strong>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta reveal" id="contact">
+            <div class="container">
+                <div class="contact-cta">
+                    <h2 style="color: white; margin-bottom: 1rem;">Canaã-Inset: Tradição e Confiança</h2>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.1rem;">A dedetizadora mais
+                        tradicional do Grajaú. Atendemos todo o Rio de Janeiro com garantia de satisfação total.</p>
+                    <div class="cta-btns">
+                        <a href="tel:+5521976351589" class="phone-link" aria-label="Ligar para Canaã-Inset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            (21) 97635-1589
+                        </a>
+                        <a href="https://wa.me/5521976351589?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
+                            target="_blank" class="btn-primary"
+                            style="display: inline-flex; width: auto; background: #25D366; border-color: #25D366;"
+                            aria-label="Falar no WhatsApp">QUERO MEU ORÇAMENTO GRÁTIS</a>
+                    </div>
+        </section>
+
+        <section class="faq reveal" id="faq">
+            <div class="container">
+                <div class="section-header"><span>Dúvidas Frequentes</span>
+                    <h2>Perguntas que recebemos todo dia</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Os produtos são seguros para crianças e pets?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Utilizamos produtos de última geração, sem cheiro e de baixa toxicidade, aprovados
+                                pela ANVISA. Após a aplicação, o ambiente pode ser utilizado normalmente em poucas
+                                horas. São totalmente seguros para crianças, idosos e animais de estimação.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Quanto tempo dura o efeito da dedetização?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O efeito residual do nosso tratamento dura em média de 3 a 6 meses, dependendo do tipo de
+                                praga e do ambiente. Recomendamos manutenções periódicas para garantir proteção contínua
+                                — e oferecemos planos mensais com desconto.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Vocês emitem laudo técnico e certificado?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. Emitimos laudo técnico e certificado de execução após cada serviço, documentos
+                                exigidos pela Vigilância Sanitária para estabelecimentos comerciais como restaurantes,
+                                clínicas, escolas e condomínios.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Preciso sair de casa durante a dedetização?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Na maioria dos casos, não é necessário. Nossos produtos são aplicados em gel e spray sem
+                                odor, permitindo que você permaneça no ambiente. Em casos específicos como
+                                descupinização com fumigação, orientamos sobre o tempo de afastamento.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Quais regiões do Rio de Janeiro vocês atendem?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Atendemos todo o Rio de Janeiro: Zona Sul, Zona Norte, Zona Oeste, Centro, Barra da
+                                Tijuca, Niterói e Baixada Fluminense. Nossa equipe chega ao local em até 24 horas após o
+                                contato.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Qual é o valor da dedetização?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O valor varia conforme o tamanho do ambiente, tipo de praga e nível de infestação.
+                                Oferecemos orçamento gratuito e sem compromisso — entre em contato pelo WhatsApp para
+                                receber uma proposta personalizada em minutos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-desc">
+                    <a href="#" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        Canaã-Inset
+                    </a>
+                    <p style="margin-top: 1rem; color: var(--text-light);">Sua solução definitiva para controle de
+                        pragas urbanas no Rio de Janeiro.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Residencial</a></li>
+                        <li><a href="#services">Comercial</a></li>
+                        <li><a href="#services">Eco-Friendly</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="tel:+5521976351589" style="display: flex; align-items: center; gap: 0.5rem;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>(21) 97635-1589</a></li>
+                        <li><a href="https://wa.me/5521976351589" target="_blank"
+                                style="display: flex; align-items: center; gap: 0.5rem;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                </svg>WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: white; margin-bottom: 1.5rem;">Localização</h3>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">R. Ferreira Pontes, 559<br>Grajaú, Rio de
+                        Janeiro - RJ<br>Atendimento Local e Imediato</p>
+                </div>
+            </div>
+            <div
+                style="padding-top: 3rem; border-top: 1px solid var(--bg-light); text-align: center; font-size: 0.85rem; color: var(--text-light);">
+                <p>© 2026 Canaã-Inset Dedetização. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5521976351589" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+    </a>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile menu
+        const openMenu = document.getElementById('open-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        openMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeMobileMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeMenu.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Animated Stat Counter
+        const statElements = document.querySelectorAll('.stat-item h2[data-target]');
+        let statsCounted = false;
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsCounted) {
+                    statsCounted = true;
+                    statElements.forEach(stat => {
+                        const target = parseInt(stat.dataset.target);
+                        const suffix = stat.dataset.suffix || '';
+                        const display = stat.dataset.display;
+                        const duration = 2000;
+                        const start = performance.now();
+                        const animate = (now) => {
+                            const progress = Math.min((now - start) / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(eased * target);
+                            if (display && progress >= 1) {
+                                stat.textContent = display;
+                            } else if (target >= 1000) {
+                                stat.textContent = Math.floor(current / 1000) + 'k' + suffix;
+                            } else {
+                                stat.textContent = current + suffix;
+                            }
+                            if (progress < 1) requestAnimationFrame(animate);
+                        };
+                        requestAnimationFrame(animate);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // Pest Icons Animation (JS-based — immune to prefers-reduced-motion)
+        (function () {
+            const pests = document.querySelectorAll('.pest-item img');
+            if (!pests.length) return;
+
+            const configs = [];
+            pests.forEach((svg, i) => {
+                configs.push({
+                    el: svg,
+                    speedX: 1.5 + Math.random() * 1.0,
+                    speedY: 2.0 + Math.random() * 0.8,
+                    speedR: 1.2 + Math.random() * 0.8,
+                    ampX: 1.0 + Math.random() * 0.5,
+                    ampY: 0.3 + Math.random() * 0.2,
+                    ampR: 3 + Math.random() * 2,
+                    offset: i * 1.2,
+                    hover: false
+                });
+                svg.parentElement.addEventListener('mouseenter', () => configs[i].hover = true);
+                svg.parentElement.addEventListener('mouseleave', () => configs[i].hover = false);
+            });
+
+            function tick(time) {
+                const t = time / 1000;
+                configs.forEach(c => {
+                    const mult = c.hover ? 3 : 1;
+                    const x = Math.sin(t * c.speedX + c.offset) * c.ampX * mult;
+                    const y = Math.cos(t * c.speedY + c.offset) * c.ampY * mult;
+                    const r = Math.sin(t * c.speedR + c.offset * 2) * c.ampR * mult;
+                    c.el.style.transform = 'translate(' + x.toFixed(2) + 'px, ' + y.toFixed(2) + 'px) rotate(' + r.toFixed(2) + 'deg)';
+                });
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        })();
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PestControlService",
+        "name": "BioGuard Dedetização",
+        "description": "Dedetização profissional no Rio de Janeiro com produtos sem cheiro, seguros para pets e crianças. Atendimento 24h e garantia total.",
+        "url": "https://www.bioguard.com.br",
+        "telephone": "+5511999999999",
+        "areaServed": {
+            "@type": "City",
+            "name": "Rio de Janeiro"
+        },
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "10000"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Os produtos de dedetização são seguros para crianças e pets?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim! Utilizamos produtos de última geração, sem cheiro e de baixa toxicidade, aprovados pela ANVISA. São totalmente seguros para crianças, idosos e animais de estimação."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo dura o efeito da dedetização?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O efeito residual do nosso tratamento dura em média de 3 a 6 meses, dependendo do tipo de praga e do ambiente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vocês emitem laudo técnico e certificado?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Emitimos laudo técnico e certificado de execução após cada serviço, documentos exigidos pela Vigilância Sanitária."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quais regiões do Rio de Janeiro vocês atendem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Atendemos todo o Rio de Janeiro: Zona Sul, Zona Norte, Zona Oeste, Centro, Barra da Tijuca, Niterói e Baixada Fluminense."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qual é o valor da dedetização?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O valor varia conforme o tamanho do ambiente, tipo de praga e nível de infestação. Oferecemos orçamento gratuito e sem compromisso."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+
+</html>
