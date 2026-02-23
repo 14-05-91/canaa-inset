@@ -801,22 +801,66 @@
         }
 
         .testimonials-grid {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 2rem;
+            padding: 2rem 1rem;
+            margin: 0 -1rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
         }
 
-        @media (min-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+        .testimonials-grid::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .testimonials-grid::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .testimonials-grid::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 20px;
         }
 
         .testimonial-card {
+            flex: 0 0 85%;
+            scroll-snap-align: center;
             background: var(--white);
             padding: 3rem;
             border-radius: 2.5rem;
             border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+        }
+
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                margin: 0;
+                padding: 2rem 0;
+                justify-content: space-between;
+                overflow-x: visible;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonial-card {
+                flex: 1;
+                scroll-snap-align: none;
+            }
+
+            /* Enable carousel only if there are more than 3 reviews */
+            .testimonials-grid.carousel {
+                display: flex;
+                overflow-x: auto;
+                justify-content: flex-start;
+            }
+
+            .testimonials-grid.carousel .testimonial-card {
+                flex: 0 0 calc(33.333% - 1.35rem);
+                scroll-snap-align: start;
+            }
         }
 
         .stars {
@@ -1632,7 +1676,7 @@
                 <div class="section-header"><span>Depoimentos</span>
                     <h2>O que dizem nossos clientes</h2>
                 </div>
-                <div class="testimonials-grid">
+                <div class="testimonials-grid carousel">
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
                         <p>"Excelente serviço, rapaz super educado e cuidadoso. O resultado foi imediato e o atendimento
